@@ -27,7 +27,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@100;500;700;900&display=swap"
         rel="stylesheet">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/image/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/image/favicon/favicon-16x16.png">
     <link rel="manifest" href="../../assets/image/favicon/site.webmanifest">
 </head>
@@ -48,15 +48,15 @@
                   
                   <div class="my-4 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                     <a onclick="history.back()" class="previous-link"><i class="fa-solid fa-rotate-left"></i> 前に戻る</a>
-                    <div class="articles pt-5 px-3 mt-2 mb-5">
+                    <div class="articles pt-5 px-3 mt-2 mb-5" id="article1">
                         <h5 class="title">
-                            1回戦・2回戦の応募素材について
+                            {{title}}
                         </h5>
                         <h6>
-                            <i class="fa-solid fa-calendar-days"></i>2022.05.21
+                            <i class="fa-solid fa-calendar-days"></i>{{date}}
                         </h6>
                         <p>
-                            兄にしな事は近頃前が多分んでう。時々張さんを記憶錐そう発展よりかかりだ先生その自分あなたか矛盾をに対して皆観念なたありんば、その十月もここか自己人達よりするで、岡田さんののが途の私についにご約束と掘て私至が実忠告がなるようにいかにご失敗を次ぐでんて、勢いちょうど注文があっましのでいましのに云いうだろ。そこでそれでご中腰にさ訳はそう余計と出ないが、その時分がはかい摘んますてという権力でしからいたまし。このうち作物の限りある生徒は私ごろにさたかと向さんのあっうない、徳義の今でってお誘惑でたなけれが、金力の一方をこの世に以前しもの嚢に今日思えがならて、わざわざの事実を認めるでその時をそのうちおりたなかろと濁しんのなかって、ないたたし全くご自己叱るる事たたた。
+                            {{body}}
                         </p>
                     
                         <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-8 offset-sm-2">
@@ -81,4 +81,6 @@
     echo kamioneFooter();
     ?>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script src="../../assets/js/article_no1.js"></script>
 </html>

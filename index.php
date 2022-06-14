@@ -22,12 +22,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@100;500;700;900&display=swap" rel="stylesheet">
-
-    <!-- <script>
-        $(window).scroll(function() {
-            $('nav').toggleClass('scrolled', $(this).scrollTop() > 500);
-        });
-    </script> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/image/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/image/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/image/favicon/site.webmanifest">
 </head>
 
 <body>
@@ -75,38 +73,26 @@
                     <h3>NEWS</h3>
                     <p>お知らせ</p>
                 </div>
-                <div class="news-articles">
-                    <!-- date -->
-                    <p>2022.5.21</p>
-                    <!-- title -->
-                    <h4><a href="news/article/article1.php">1回戦・2回戦の応募素材について</a></h4>
-                    <!-- Headline -->
-                    <div class="body">
-                        <h6>私は時間もしどんな束縛者ってののうちをしたた。いったい私は時間もしどんな束縛者ってののうちをしたた。</h6>
+                
+                <div id="app">
+                    
+                     
+                      <div class="news-articles" v-for="(article,pIndex) in toBeShown" :key="pIndex">
+                        
+                        <p>{{article.date}}</p>
+                        
+                        <h4><a v-bind:href="article.articleLink">{{article.title}}</a></h4>
+                        
+                        <div class="body">
+                            <h6>{{article.body}}</h6>
+                        </div>
                     </div>
-                </div>
-                <div class="news-articles">
-                    <!-- date -->
-                    <p>2022.5.21</p>
-                    <!-- title -->
-                    <h4><a href="news/article/article2.php">1回戦・2回戦の応募素材について</a></h4>
-                    <!-- Headline -->
-                    <div class="body">
-                        <h6>私は時間もしどんな束縛者ってののうちをしたた。いったい私は時間もしどんな束縛者ってののうちをしたた。</h6>
+                      
+                    
+                    <div class="my-4 text-center">
+                        <button class="btn btn-secondary" @click="prevPage" :disabled="currentPage==1">戻す</button>
+                        <button class="btn btn-primary" @click="nextPage" :disabled="currentPage == totalPages">もっと見る</button>
                     </div>
-                </div>
-                <div class="news-articles">
-                    <!-- date -->
-                    <p>2022.5.21</p>
-                    <!-- title -->
-                    <h4><a href="news/article/article3.php">1回戦・2回戦の応募素材について</a></h4>
-                    <!-- Headline -->
-                    <div class="body">
-                        <h6>私は時間もしどんな束縛者ってののうちをしたた。いったい私は時間もしどんな束縛者ってののうちをしたた。</h6>
-                    </div>
-                </div>
-                <div class="button-area text-center mt-4">
-                    <button class="btn btn-outline-primary">もっと見る</button>
                 </div>
             </div>
             <div class="sample-video">
@@ -211,5 +197,8 @@
 </body>
 
 <script src="assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script src="assets/js/article.js"></script>
+
 
 </html>

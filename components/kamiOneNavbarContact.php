@@ -24,9 +24,6 @@
                 <a class="nav-link" href="/movies/index.php">動画</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/schedule/index.php">スケジュール</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="/contact/index.php">お問い合わせ</a>
             </li>
         </ul>

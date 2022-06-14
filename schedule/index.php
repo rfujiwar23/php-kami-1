@@ -46,7 +46,7 @@
         ?>
         
         <div class="top">
-            <h2>記事</h2>
+            <h2>日程・結果</h2>
         </div>
 
         <div class="schedule-page">
@@ -67,6 +67,9 @@
                                 </div>
                             </div>
                         </a>
+                        <div class="round-info col-10 offset-1">
+                        <p v-html="schedule.info"></p>
+                        </div>    
                         <div class="arrow" :class="schedule.innerLink">
                             <img src="../assets/image/schedule-down.png" alt="下">
                         </div>
@@ -82,11 +85,7 @@
                                 <p>(仮）動画を提出</p>
                             </div>
                         </div>
-                        <p>
-                            タイトル・コンセプト説明を踏まえて、クリエイティブ・映像関係に強い企業様（複数社）が1次審査を実施。<br>
-                            ご応募いただいた映像作品の中から、構成・内容ともに優れた作品を厳選して、2回戦進出者orチームを決定します。<br>
-                            <span><strong>*</strong> 1次審査・2次審査は同時期に実施します。</span>
-                        </p>
+                        
                         <dl class="list_table">
                             <template v-for="list in tableLists1">
                             <dt>{{list.header}}</dt>
@@ -105,11 +104,7 @@
                             </div>
                         </div>
                         <!-- <h3>2回戦・2次審査</h3> -->
-                        <p>
-                            1次審査同様タイトル・コンセプト説明を踏まえて、クリエイティブ・映像関係に強い企業様（複数社）が2回戦用の映像を2次審査。<br>
-                            ご応募いただいた映像作品の中から、新しい感性に満ち溢れた作品を厳選して、12名（チーム）の決勝進出者orチームを決定します。<br>
-                            <span><strong>*</strong>1次審査・2次審査は同時期に実施します。</span>
-                        </p>
+                        
                         <dl class="list_table">
                             <template v-for="list in tableLists2">
                             <dt>{{list.header}}</dt>
@@ -128,11 +123,6 @@
                             </div>
                         </div>
                         <!-- <h3>決勝戦</h3> -->
-                        <p>
-                            タイトル・コンセプト説明を踏まえて、他業界のクリエイター、カミカリスマ美容師の方々を審査員に迎え、事前審査を行います。<br>
-                            決勝戦は、12月13日に開催される<strong>KAMI CHARISMA 2023
-                                AWARD</strong>内にて、進出者の作品を紹介した上で、見事グランプリに輝いた美容師もしくはチームを発表致します。
-                        </p>
                         <dl class="list_table">
                         <template v-for="list in tableLists3">
                             <dt>{{list.header}}</dt>

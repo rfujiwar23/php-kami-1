@@ -46,6 +46,12 @@
                 <div class="contents">
                     <img src="assets/image/main-logo.png" alt="KAMI-1 カミワン" class="img-fluid">
                     <h2 class="text-center">理美容業界初、映像コンテスト始動！</h2>
+                    <a href="#" class="entry-link">
+                        <div class="entry-button my-3">
+                            <h3>エントリー</h3>
+                            <p><strong>応募締切：2022年8月20日</strong></p>
+                        </div>
+                    </a>
                 </div>
             </div>
 

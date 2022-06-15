@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html lang="ja">
-
 <head>
 <html lang="ja">
 <meta charset="UTF-8">
